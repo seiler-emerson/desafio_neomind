@@ -1,0 +1,32 @@
+package relogio.executavel;
+
+import java.util.Scanner;
+
+import relogio.classes.AnguloRelogio;
+
+public class Execucao {
+
+	public static void main(String[] args) {
+
+		int horaInput = 0 ;
+		int minutoInput;
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Por favor informe a hora: ");
+		
+		try {
+			horaInput = input.nextInt();			
+		} catch (Exception e) {
+			System.out.println("iNFORME UM NUMERO");
+		}
+		
+
+		System.out.println("Por favor informe a hora: ");
+		minutoInput = input.nextInt();
+		
+		AnguloRelogio verificarAngulo = new AnguloRelogio();
+		
+		System.out.println("Angulo: "+verificarAngulo.retornaAnguloRelogio(horaInput, minutoInput));
+	}
+
+}

@@ -1,0 +1,14 @@
+package relogio.executavel;
+
+import relogio.classes.AnguloRelogio;
+
+public class main {
+
+	public static void main(String[] args) {
+
+		AnguloRelogio verificarAngulo = new AnguloRelogio();
+		
+		verificarAngulo.retornaAnguloRelogio(0, 0);
+	}
+
+}

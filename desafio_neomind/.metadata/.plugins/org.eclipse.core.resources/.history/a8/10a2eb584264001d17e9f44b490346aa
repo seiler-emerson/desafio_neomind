@@ -1,0 +1,65 @@
+package relogio.executavel;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+import relogio.classes.AnguloRelogio;
+
+public class Execucao {
+	
+	static int horaInput;
+	static int minutoInput;
+	static Scanner input = new Scanner(System.in);
+	static boolean errorInputHora = false;
+
+	public static void main(String[] args) {
+
+		CaputurarHora();				
+		
+//	try {
+//	} catch (InputMismatchException e) {
+//		errorInputHora = true;
+//		System.out.println("ATENCAO DIGITE APENAS DIGITE NUMEROS ENTRE 0 e 12!");
+////		e.printStackTrace();
+//	} finally {
+//		if(errorInputHora) {	
+//			System.out.println("cheguei");
+//			CaputurarHora();		
+//		}
+//	}
+		
+		
+		
+		
+
+//		System.out.println("Por favor informe a hora: ");
+//		minutoInput = input.nextInt();
+//		
+//		AnguloRelogio verificarAngulo = new AnguloRelogio();
+//		
+//		System.out.println("Angulo: "+verificarAngulo.retornaAnguloRelogio(horaInput, minutoInput));
+	}
+	
+	public static void CaputurarHora() {
+		System.out.println("Por favor informe um valor referente a hora entre 1 e 12: ");
+		
+//		while() {
+//			
+//		}
+		try {
+			horaInput = input.nextInt();			
+		} catch (Exception e) {
+			horaInput = 0;
+			System.out.println("ATENCAO DIGITE APENAS DIGITE NUMEROS ENTRE 0 e 12!");
+			CaputurarHora();
+		}
+		
+		
+		if(horaInput > 12 && horaInput < 0) {		
+			System.out.println("ATENCAO DIGITE APENAS DIGITE NUMEROS ENTRE 0 e 12!");
+			CaputurarHora();			
+		}
+		
+	}
+
+}

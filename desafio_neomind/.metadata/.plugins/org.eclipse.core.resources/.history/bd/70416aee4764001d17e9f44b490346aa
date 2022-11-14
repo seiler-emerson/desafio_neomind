@@ -1,0 +1,28 @@
+package relogio.classes;
+
+import java.util.Objects;
+
+public class AnguloRelogio {
+
+	private int hora;
+	private int minutos;
+
+	public int retornaAnguloRelogio(int hora, int minuto) {
+		
+		if(hora>12) {
+			hora -=12;
+		}
+		
+		int anguloHora = (360/12) * hora;
+		int anguloMinuto = (360/60 * minuto);
+		
+		System.out.println("Angulo ponteiro hora: "+anguloHora );
+		System.out.println("Angulo ponteiro minuto: "+anguloMinuto );
+
+		if((anguloHora > anguloMinuto)) {
+			return anguloHora - anguloMinuto;
+		} else {
+			return anguloMinuto - anguloHora;
+		}
+	}
+}
